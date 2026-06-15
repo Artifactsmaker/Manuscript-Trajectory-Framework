@@ -1,4 +1,8 @@
-This manuscript is licensed under
-Creative Commons Attribution 4.0 International (CC BY 4.0).
+Copyright © 2026 Phan Thanh Trung
 
-https://creativecommons.org/licenses/by/4.0/
+This manuscript is licensed under the
+Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
+
+You are free to share and adapt this work for non-commercial purposes, provided appropriate credit is given to the author.
+
+https://creativecommons.org/licenses/by-nc/4.0/
