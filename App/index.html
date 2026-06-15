@@ -846,9 +846,21 @@
             }
         };
 
+        // Clean up any dirty, corrupt, placeholder, or stringified localStorage key values
+        let savedKey = localStorage.getItem('ujrs_apiKey');
+        if (savedKey) {
+            const trimmed = savedKey.trim();
+            if (trimmed === '' || trimmed === 'null' || trimmed === 'undefined' || trimmed === 'placeholder') {
+                localStorage.removeItem('ujrs_apiKey');
+                savedKey = '';
+            }
+        } else {
+            savedKey = '';
+        }
+
         // Init Global State
         const state = {
-            apiKey: localStorage.getItem('ujrs_apiKey') || '',
+            apiKey: savedKey,
             temperature: parseFloat(localStorage.getItem('ujrs_temp') || '0.3'),
             currentData: null,
             activeTab: 'overview',
