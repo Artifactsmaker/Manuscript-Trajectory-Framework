@@ -96,7 +96,7 @@
                     <h1 class="text-lg font-extrabold tracking-tight bg-gradient-to-r from-academic-700 via-indigo-600 to-violet-600 bg-clip-text text-transparent dark:from-academic-200 dark:to-indigo-400">
                         TrajectoryLab
                     </h1>
-                    <p class="text-[10px] text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">
+                    <p data-i18n="app_sub" class="text-[10px] text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">
                         Manuscript Positioning & Journal Matching
                     </p>
                 </div>
@@ -121,8 +121,7 @@
                     <i class="fa-solid fa-sliders text-lg"></i>
                 </button>
 
-                <span class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-950/50 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-900/50">
-                    <span class="h-1.5 w-1.5 rounded-full bg-indigo-600 mr-1.5 animate-pulse"></span>
+                <span data-i18n="rigor_mode" class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-950/50 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-900/50">
                     Rigorous Review Mode
                 </span>
             </div>
@@ -137,7 +136,7 @@
                     <i class="fa-solid fa-user-graduate text-indigo-500"></i>
                     <span>Phan Thanh Trung</span>
                 </div>
-                <div class="text-slate-500 dark:text-slate-400 text-[11px]">
+                <div data-i18n="author_title" class="text-slate-500 dark:text-slate-400 text-[11px]">
                     Independent Researcher, Vietnam
                 </div>
                 <a href="https://orcid.org/0009-0000-7520-6781" target="_blank" class="flex items-center gap-1 text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 transition font-mono text-[11px]">
@@ -162,7 +161,7 @@
     <div id="settingsModal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden no-print">
         <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl max-w-md w-full p-6 shadow-2xl m-4">
             <div class="flex justify-between items-center mb-4">
-                <h3 class="text-lg font-bold flex items-center gap-2">
+                <h3 data-i18n="configure_platform_title" class="text-lg font-bold flex items-center gap-2">
                     <i class="fa-solid fa-gear text-indigo-500"></i>
                     Configure Platform
                 </h3>
@@ -172,25 +171,25 @@
             </div>
             <div class="space-y-4">
                 <div>
-                    <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                    <label data-i18n="api_key_lbl" class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
                         API Key (Leave empty to use System Key)
                     </label>
-                    <input id="apiKeyInput" type="password" placeholder="Enter your Gemini API Key..." class="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-academic-950 rounded-lg text-sm text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    <p class="text-[10px] text-slate-400 mt-1">If empty, the app will run on system allocated runtime keys automatically.</p>
+                    <input id="apiKeyInput" type="password" data-i18n-placeholder="api_key_placeholder" placeholder="Enter your Gemini API Key..." class="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-academic-950 rounded-lg text-sm text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <p data-i18n="api_key_desc" class="text-[10px] text-slate-400 mt-1">If empty, the app will run on system allocated runtime keys automatically.</p>
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                    <label data-i18n="ai_rigor_lbl" class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
                         AI Rigor Index (Temperature)
                     </label>
                     <div class="flex items-center gap-3">
                         <input id="tempInput" type="range" min="0.1" max="0.9" step="0.1" value="0.3" class="w-full accent-indigo-600">
                         <span id="tempValue" class="text-sm font-semibold text-indigo-600">0.3</span>
                     </div>
-                    <p class="text-[10px] text-slate-400 mt-1">Low (0.1 - 0.3): Hyper-consistent, strict technical validation, objective assessments.</p>
+                    <p data-i18n="ai_rigor_desc" class="text-[10px] text-slate-400 mt-1">Low (0.1 - 0.3): Hyper-consistent, strict technical validation, objective assessments.</p>
                 </div>
             </div>
             <div class="mt-6 flex justify-end gap-2">
-                <button id="saveSettings" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg transition">
+                <button id="saveSettings" data-i18n="save_config_btn" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg transition">
                     Save Config
                 </button>
             </div>
@@ -205,13 +204,13 @@
             <!-- Manuscript Details Panel -->
             <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm flex flex-col flex-grow">
                 <div class="flex justify-between items-center mb-3">
-                    <h2 class="text-sm font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 flex items-center gap-2">
+                    <h2 data-i18n="workspace_title" class="text-sm font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 flex items-center gap-2">
                         <i class="fa-solid fa-file-pen text-indigo-500"></i>
                         Manuscript Workspace
                     </h2>
                     <div class="relative">
                         <button id="demoBtn" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 dark:bg-academic-800 dark:hover:bg-academic-700 text-xs font-semibold rounded-lg text-indigo-600 dark:text-indigo-400 flex items-center gap-1.5 transition" title="Select paper model">
-                            <i class="fa-solid fa-paste"></i> Load Demo
+                            <i class="fa-solid fa-paste"></i> <span data-i18n="load_demo">Load Demo</span>
                         </button>
                         <!-- Demo Dropdown -->
                         <div id="demoDropdown" class="absolute right-0 mt-1.5 w-64 bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-lg shadow-xl hidden z-50">
@@ -241,36 +240,36 @@
 
                 <div class="space-y-4 flex-grow flex flex-col">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                        <label data-i18n="paper_title_lbl" class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
                             Manuscript Title
                         </label>
-                        <input id="paperTitle" type="text" placeholder="Enter target manuscript or concept title..." class="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-academic-950 rounded-lg text-sm text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <input id="paperTitle" type="text" data-i18n-placeholder="paper_title_placeholder" placeholder="Enter target manuscript or concept title..." class="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-academic-950 rounded-lg text-sm text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                        <label data-i18n="paper_field_lbl" class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
                             Target Field & Aimed Journals
                         </label>
-                        <input id="paperField" type="text" placeholder="e.g., Federated Learning, IEEE TPAMI, Nature Biotech..." class="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-academic-950 rounded-lg text-sm text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <input id="paperField" type="text" data-i18n-placeholder="paper_field_placeholder" placeholder="e.g., Federated Learning, IEEE TPAMI, Nature Biotech..." class="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-academic-950 rounded-lg text-sm text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                        <label data-i18n="paper_abstract_lbl" class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
                             Scientific Abstract
                         </label>
-                        <textarea id="paperAbstract" rows="4" placeholder="Write full abstract outlining introduction, methods, results..." class="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-academic-950 rounded-lg text-sm text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none resize-none"></textarea>
+                        <textarea id="paperAbstract" rows="4" data-i18n-placeholder="paper_abstract_placeholder" placeholder="Write full abstract outlining introduction, methods, results..." class="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-academic-950 rounded-lg text-sm text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none resize-none"></textarea>
                     </div>
 
                     <div class="flex-grow flex flex-col">
-                        <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+                        <label data-i18n="paper_details_lbl" class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
                             Key Details (Methodology, Math, Experiments, Data Links)
                         </label>
-                        <textarea id="paperContent" placeholder="Include formulas, algorithms, datasets, code references..." class="w-full flex-grow px-3 py-2 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-academic-950 rounded-lg text-sm text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none resize-none min-h-[200px]"></textarea>
+                        <textarea id="paperContent" data-i18n-placeholder="paper_details_placeholder" placeholder="Include formulas, algorithms, datasets, code references..." class="w-full flex-grow px-3 py-2 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-academic-950 rounded-lg text-sm text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none resize-none min-h-[200px]"></textarea>
                     </div>
 
                     <button id="runSimulator" class="w-full py-3.5 bg-gradient-to-r from-academic-700 via-indigo-600 to-violet-600 hover:from-academic-800 hover:to-violet-700 text-white font-bold text-sm uppercase tracking-wider rounded-xl shadow-lg hover:shadow-indigo-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2.5">
                         <i class="fa-solid fa-gears animate-spin-slow"></i>
-                        Launch Positioning Engine
+                        <span data-i18n="launch_engine_btn">Launch Positioning Engine</span>
                     </button>
                 </div>
             </div>
@@ -300,8 +299,8 @@
                 <!-- Simulation Visual Step Guide -->
                 <div id="progressStepSection" class="hidden border-t border-slate-800 pt-4 mt-4">
                     <div class="flex justify-between text-[10px] text-slate-500 font-semibold uppercase tracking-wider mb-2">
-                        <span>AI Positioning Progress</span>
-                        <span id="progressPercent">0% Complete</span>
+                        <span data-i18n="progress_lbl">AI Positioning Progress</span>
+                        <span id="progressPercent" data-i18n="progress_percent">0% Complete</span>
                     </div>
                     <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
                         <div id="progressBar" class="bg-gradient-to-r from-indigo-500 via-emerald-400 to-violet-500 h-full w-0 transition-all duration-300"></div>
@@ -319,7 +318,7 @@
                                 <span class="text-xs font-bold uppercase px-2.5 py-0.5 rounded-full tracking-wider" id="verdictBadge">
                                     --
                                 </span>
-                                <span class="text-xs text-slate-500 dark:text-slate-400">Official Decision Report</span>
+                                <span data-i18n="decision_report" class="text-xs text-slate-500 dark:text-slate-400">Official Decision Report</span>
                             </div>
                             <h2 class="text-lg font-bold" id="resPaperTitle">N/A</h2>
                             <p class="text-xs text-slate-400" id="resPaperMeta">N/A</p>
@@ -328,7 +327,7 @@
                         <!-- Overall Score Gauge -->
                         <div class="flex items-center gap-3 bg-slate-50 dark:bg-academic-950 p-3 rounded-lg border border-slate-100 dark:border-slate-800">
                             <div class="text-right">
-                                <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Editorial Rigor</div>
+                                <div data-i18n="editorial_rigor" class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Editorial Rigor</div>
                                 <div class="text-2xl font-black text-slate-800 dark:text-slate-100" id="overallScore">0/100</div>
                             </div>
                             <div class="h-12 w-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
@@ -341,19 +340,19 @@
                 <!-- NAVIGATION TABS -->
                 <div class="border-b border-slate-200 dark:border-slate-800 flex overflow-x-auto gap-2 no-print">
                     <button onclick="switchTab('overview')" class="tab-btn px-4 py-2 border-b-2 border-indigo-600 font-bold text-xs uppercase tracking-wider text-indigo-600 shrink-0 flex items-center gap-1.5" id="tab-overview">
-                        <i class="fa-solid fa-chart-pie"></i> ADN & Genotype
+                        <i class="fa-solid fa-chart-pie"></i> <span data-i18n="tab_overview">ADN & Genotype</span>
                     </button>
                     <button onclick="switchTab('soundness')" class="tab-btn px-4 py-2 border-b-2 border-transparent font-bold text-xs uppercase tracking-wider text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 shrink-0 flex items-center gap-1.5" id="tab-soundness">
-                        <i class="fa-solid fa-vial"></i> Technical Aspects
+                        <i class="fa-solid fa-vial"></i> <span data-i18n="tab_soundness">Technical Aspects</span>
                     </button>
                     <button onclick="switchTab('simulation')" class="tab-btn px-4 py-2 border-b-2 border-transparent font-bold text-xs uppercase tracking-wider text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 shrink-0 flex items-center gap-1.5" id="tab-simulation">
-                        <i class="fa-solid fa-cube"></i> Journal Matching
+                        <i class="fa-solid fa-cube"></i> <span data-i18n="tab_simulation">Journal Matching</span>
                     </button>
                     <button onclick="switchTab('reports')" class="tab-btn px-4 py-2 border-b-2 border-transparent font-bold text-xs uppercase tracking-wider text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 shrink-0 flex items-center gap-1.5" id="tab-reports">
-                        <i class="fa-solid fa-comments"></i> Peer Reviews
+                        <i class="fa-solid fa-comments"></i> <span data-i18n="tab_reports">Peer Reviews</span>
                     </button>
                     <button onclick="switchTab('export')" class="tab-btn px-4 py-2 border-b-2 border-transparent font-bold text-xs uppercase tracking-wider text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 shrink-0 flex items-center gap-1.5" id="tab-export">
-                        <i class="fa-solid fa-file-export"></i> Export Report
+                        <i class="fa-solid fa-file-export"></i> <span data-i18n="tab_export">Export Report</span>
                     </button>
                 </div>
 
@@ -364,27 +363,27 @@
                     <div id="content-overview" class="tab-content space-y-6">
                         <!-- ADN Genotype Report -->
                         <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
-                            <h3 class="text-sm font-bold uppercase tracking-wider text-indigo-500 mb-4 flex items-center gap-2">
+                            <h3 data-i18n="phase0_title" class="text-sm font-bold uppercase tracking-wider text-indigo-500 mb-4 flex items-center gap-2">
                                 <i class="fa-solid fa-dna text-violet-500"></i>
                                 Phase 0: Manuscript Genotype & Ontology Analysis
                             </h3>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Manuscript Components (%)</h4>
+                                    <h4 data-i18n="components_lbl" class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Manuscript Components (%)</h4>
                                     <div class="space-y-2.5" id="dnaPercentages">
                                         <!-- Will populate dynamically -->
                                     </div>
                                 </div>
                                 <div class="space-y-4">
                                     <div>
-                                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Operator Classification</h4>
+                                        <h4 data-i18n="operator_lbl" class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Operator Classification</h4>
                                         <div class="flex flex-wrap gap-1.5" id="dnaOperators">
                                             <!-- Will populate dynamically -->
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Manuscript Species</h4>
+                                        <h4 data-i18n="species_lbl" class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Manuscript Species</h4>
                                         <div class="bg-indigo-50/50 dark:bg-indigo-950/20 p-3 rounded-lg border border-indigo-100/50 dark:border-indigo-900/30">
                                             <div class="text-sm font-bold text-indigo-600 dark:text-indigo-400" id="speciesTitle">N/A</div>
                                             <p class="text-xs text-slate-500 dark:text-slate-400 mt-1" id="speciesReason">N/A</p>
@@ -395,7 +394,7 @@
 
                             <!-- DNA Score Report Grid -->
                             <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
-                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">DNA Index Map</h4>
+                                <h4 data-i18n="dna_map_lbl" class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">DNA Index Map</h4>
                                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3" id="dnaGrid">
                                     <!-- Populated dynamically -->
                                 </div>
@@ -407,7 +406,7 @@
                             <!-- Desk Screening -->
                             <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
                                 <div class="flex justify-between items-start mb-4">
-                                    <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                                    <h3 data-i18n="phase1_title" class="text-sm font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
                                         <i class="fa-solid fa-passport text-amber-500"></i>
                                         Phase 1: Initial Desk Screening
                                     </h3>
@@ -421,7 +420,7 @@
 
                             <!-- Editor Decision Summary (Phase 8) -->
                             <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
-                                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
+                                <h3 data-i18n="phase8_title" class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
                                         <i class="fa-solid fa-signature text-emerald-500"></i>
                                         Phase 8: Editorial Synthesized Opinion
                                     </h3>
@@ -432,7 +431,7 @@
                         <!-- Reasons Accept vs Reject -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="bg-emerald-50/50 dark:bg-emerald-950/10 border border-emerald-100 dark:border-emerald-900/30 rounded-xl p-5 shadow-sm">
-                                <h4 class="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                                <h4 data-i18n="accept_reasons_lbl" class="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
                                     <i class="fa-solid fa-circle-check"></i> Three Strongest Arguments to Accept
                                 </h4>
                                 <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300" id="reasonsAccept">
@@ -440,7 +439,7 @@
                                 </ul>
                             </div>
                             <div class="bg-rose-50/50 dark:bg-rose-950/10 border border-rose-100 dark:border-rose-900/30 rounded-xl p-5 shadow-sm">
-                                <h4 class="text-xs font-bold text-rose-700 dark:text-rose-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                                <h4 data-i18n="reject_reasons_lbl" class="text-xs font-bold text-rose-700 dark:text-rose-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
                                     <i class="fa-solid fa-circle-xmark"></i> Three Strongest Arguments to Reject
                                 </h4>
                                 <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300" id="reasonsReject">
@@ -455,47 +454,47 @@
                         <!-- Technical soundness + Novelty + Reproducibility + Impact scores cards -->
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                             <div class="bg-white dark:bg-academic-900 p-4 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm text-center">
-                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Phase 2: Novelty Index</div>
+                                <div data-i18n="phase2_novelty_lbl" class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Phase 2: Novelty Index</div>
                                 <div class="text-3xl font-black text-indigo-600 dark:text-indigo-400" id="noveltyScore">0/10</div>
                             </div>
                             <div class="bg-white dark:bg-academic-900 p-4 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm text-center">
-                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Phase 3: Rigor Index</div>
+                                <div data-i18n="phase3_rigor_lbl" class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Phase 3: Rigor Index</div>
                                 <div class="text-3xl font-black text-indigo-600 dark:text-indigo-400" id="technicalScore">0/10</div>
                             </div>
                             <div class="bg-white dark:bg-academic-900 p-4 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm text-center">
-                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Phase 4: Reproducibility</div>
+                                <div data-i18n="phase4_repro_lbl" class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Phase 4: Reproducibility</div>
                                 <div class="text-3xl font-black text-indigo-600 dark:text-indigo-400 flex items-center justify-center gap-1.5">
                                     <span id="reproScore">0/10</span>
                                     <span class="text-xs px-1.5 py-0.5 rounded font-bold uppercase" id="reproClass">--</span>
                                 </div>
                             </div>
                             <div class="bg-white dark:bg-academic-900 p-4 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm text-center">
-                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Phase 5: Impact Score</div>
+                                <div data-i18n="phase5_impact_lbl" class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Phase 5: Impact Score</div>
                                 <div class="text-3xl font-black text-indigo-600 dark:text-indigo-400" id="impactScore">0/10</div>
                             </div>
                         </div>
 
                         <!-- Technical Concerns Block (Phase 3 Detailed) -->
                         <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
-                            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
+                            <h3 data-i18n="phase3_detail_title" class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
                                 <i class="fa-solid fa-circle-exclamation text-rose-500"></i>
                                 Phase 3: Technical Soundness, Mathematics & Gaps
                             </h3>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div class="p-3 bg-red-50/50 dark:bg-red-950/10 border border-red-100 dark:border-red-900/30 rounded-lg">
-                                    <h4 class="text-xs font-bold text-red-600 uppercase tracking-wider mb-2">Major Concerns</h4>
+                                    <h4 data-i18n="major_concerns_lbl" class="text-xs font-bold text-red-600 uppercase tracking-wider mb-2">Major Concerns</h4>
                                     <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300 list-disc list-inside" id="majorConcerns">
                                         <!-- Dynamic -->
                                     </ul>
                                 </div>
                                 <div class="p-3 bg-amber-50/50 dark:bg-amber-950/10 border border-amber-100 dark:border-amber-900/30 rounded-lg">
-                                    <h4 class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-2">Minor Concerns</h4>
+                                    <h4 data-i18n="minor_concerns_lbl" class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-2">Minor Concerns</h4>
                                     <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300 list-disc list-inside" id="minorConcerns">
                                         <!-- Dynamic -->
                                     </ul>
                                 </div>
                                 <div class="p-3 bg-slate-50 dark:bg-academic-950 border border-slate-100 dark:border-slate-800 rounded-lg">
-                                    <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Missing Components</h4>
+                                    <h4 data-i18n="missing_comp_lbl" class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Missing Components</h4>
                                     <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300 list-disc list-inside" id="missingComponents">
                                         <!-- Dynamic -->
                                     </ul>
@@ -506,21 +505,21 @@
                         <!-- Novelty & Risk Analysis (Phase 2 Detailed) -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
-                                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
+                                <h3 data-i18n="phase2_detail_title" class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
                                     <i class="fa-solid fa-lightbulb text-amber-500"></i>
                                     Phase 2: Novelty Analysis & Breakthrough Potential
                                 </h3>
                                 <div class="space-y-3 text-xs">
                                     <div>
-                                        <h4 class="font-bold text-indigo-500 mb-1">Novelty Strengths:</h4>
+                                        <h4 data-i18n="novelty_strengths_lbl" class="font-bold text-indigo-500 mb-1">Novelty Strengths:</h4>
                                         <ul class="list-disc list-inside space-y-1" id="noveltyStrengths"></ul>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-red-500 mb-1">Novelty Gaps/Weaknesses:</h4>
+                                        <h4 data-i18n="novelty_gaps_lbl" class="font-bold text-red-500 mb-1">Novelty Gaps/Weaknesses:</h4>
                                         <ul class="list-disc list-inside space-y-1" id="noveltyWeaknesses"></ul>
                                     </div>
                                     <div class="p-2.5 bg-yellow-50 dark:bg-yellow-950/20 border border-yellow-100 dark:border-yellow-900/20 rounded">
-                                        <h4 class="font-bold text-yellow-700 dark:text-yellow-400 mb-1">Novelty Risk Assessment:</h4>
+                                        <h4 data-i18n="novelty_risk_lbl" class="font-bold text-yellow-700 dark:text-yellow-400 mb-1">Novelty Risk Assessment:</h4>
                                         <p id="noveltyRisk" class="text-slate-600 dark:text-slate-300"></p>
                                     </div>
                                 </div>
@@ -528,21 +527,21 @@
 
                             <!-- Impact Analysis & Reproducibility Detail (Phase 4 & 5) -->
                             <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
-                                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
+                                <h3 data-i18n="phase4_5_detail_title" class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
                                     <i class="fa-solid fa-code text-indigo-500"></i>
                                     Phase 4 & 5: Replication & Community Impact
                                 </h3>
                                 <div class="space-y-3 text-xs">
                                     <div>
-                                        <h4 class="font-semibold text-slate-500">Source Code & Data Accessibility:</h4>
+                                        <h4 data-i18n="code_avail_lbl" class="font-semibold text-slate-500">Source Code & Data Accessibility:</h4>
                                         <p id="reproCodeAvail" class="text-slate-700 dark:text-slate-300 font-mono text-[11px] bg-slate-50 dark:bg-academic-950 p-1.5 rounded mt-0.5"></p>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-slate-500">Theoretical Replication/Verification Soundness:</h4>
+                                        <h4 data-i18n="repro_soundness_lbl" class="font-semibold text-slate-500">Theoretical Replication/Verification Soundness:</h4>
                                         <p id="reproJust" class="text-slate-700 dark:text-slate-300"></p>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-slate-500">Scientific Impact Vector:</h4>
+                                        <h4 data-i18n="impact_lbl" class="font-semibold text-slate-500">Scientific Impact Vector:</h4>
                                         <p id="impactScientific" class="text-slate-700 dark:text-slate-300"></p>
                                     </div>
                                 </div>
@@ -553,11 +552,11 @@
                     <!-- TAB 3: JOURNAL TIER SIMULATION -->
                     <div id="content-simulation" class="tab-content hidden space-y-6">
                         <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
-                            <h3 class="text-sm font-bold uppercase tracking-wider text-indigo-500 mb-2 flex items-center gap-2">
+                            <h3 data-i18n="phase6_title" class="text-sm font-bold uppercase tracking-wider text-indigo-500 mb-2 flex items-center gap-2">
                                 <i class="fa-solid fa-chart-column text-violet-500"></i>
                                 Phase 6: Simulated Review Yield Distribution across Journal Tiers (Q1 - Q3)
                             </h3>
-                            <p class="text-xs text-slate-500 mb-5">Calculated probability models representing the likelihood of different outcomes across top-tier venues.</p>
+                            <p data-i18n="yield_probability_lbl" class="text-xs text-slate-500 mb-5">Calculated probability models representing the likelihood of different outcomes across top-tier venues.</p>
                             
                             <div class="space-y-5" id="simulationBars">
                                 <!-- Populated dynamically -->
@@ -567,7 +566,7 @@
                         <!-- Strategic submission advisor (Phase 9) -->
                         <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
                             <div class="flex justify-between items-center mb-3">
-                                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                                <h3 data-i18n="phase9_title" class="text-sm font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
                                     <i class="fa-solid fa-compass text-amber-500"></i>
                                     Phase 9: Strategic Submission Advisor
                                 </h3>
@@ -582,29 +581,29 @@
 
                     <!-- TAB 4: REVIEWER REPORTS -->
                     <div id="content-reports" class="tab-content hidden space-y-6">
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-indigo-500 mb-2 flex items-center gap-2">
+                        <h3 data-i18n="phase7_title" class="text-sm font-bold uppercase tracking-wider text-indigo-500 mb-2 flex items-center gap-2">
                             <i class="fa-solid fa-gavel"></i>
                             Phase 7: Individual Simulated Reviewer Board Transcripts
                         </h3>
-                        <p class="text-xs text-slate-500">Rigorous feedback and revision guidelines produced by specialized autonomous scientific roles.</p>
+                        <p data-i18n="reviewer_comments_lbl" class="text-xs text-slate-500">Rigorous feedback and revision guidelines produced by specialized autonomous scientific roles.</p>
 
                         <div class="space-y-6">
                             <!-- Reviewer A -->
                             <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
-                                <h4 class="text-xs font-bold text-indigo-600 uppercase tracking-wider border-b border-slate-100 dark:border-slate-800 pb-2 mb-3 flex items-center gap-1.5">
+                                <h4 data-i18n="reviewer_a_lbl" class="text-xs font-bold text-indigo-600 uppercase tracking-wider border-b border-slate-100 dark:border-slate-800 pb-2 mb-3 flex items-center gap-1.5">
                                     <i class="fa-solid fa-user-tie"></i> Reviewer A – Technical Reviewer
                                 </h4>
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
                                     <div class="bg-emerald-50/50 dark:bg-emerald-950/10 p-3 rounded">
-                                        <h5 class="font-bold text-emerald-700 dark:text-emerald-400 mb-1">Strengths / Positives</h5>
+                                        <h5 data-i18n="positive_title" class="font-bold text-emerald-700 dark:text-emerald-400 mb-1">Strengths / Positives</h5>
                                         <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300" id="revAPos"></ul>
                                     </div>
                                     <div class="bg-rose-50/50 dark:bg-rose-950/10 p-3 rounded">
-                                        <h5 class="font-bold text-rose-700 dark:text-rose-400 mb-1">Critical Deficiencies</h5>
+                                        <h5 data-i18n="deficiencies_title" class="font-bold text-rose-700 dark:text-rose-400 mb-1">Critical Deficiencies</h5>
                                         <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300" id="revACrit"></ul>
                                     </div>
                                     <div class="bg-slate-50 dark:bg-academic-950 p-3 rounded">
-                                        <h5 class="font-bold text-slate-500 mb-1">Mandatory Revisions</h5>
+                                        <h5 data-i18n="revisions_title" class="font-bold text-slate-500 mb-1">Mandatory Revisions</h5>
                                         <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300" id="revARev"></ul>
                                     </div>
                                 </div>
@@ -612,20 +611,20 @@
 
                             <!-- Reviewer B -->
                             <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
-                                <h4 class="text-xs font-bold text-indigo-600 uppercase tracking-wider border-b border-slate-100 dark:border-slate-800 pb-2 mb-3 flex items-center gap-1.5">
+                                <h4 data-i18n="reviewer_b_lbl" class="text-xs font-bold text-indigo-600 uppercase tracking-wider border-b border-slate-100 dark:border-slate-800 pb-2 mb-3 flex items-center gap-1.5">
                                     <i class="fa-solid fa-wand-magic-sparkles"></i> Reviewer B – Novelty Reviewer
                                 </h4>
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
                                     <div class="bg-emerald-50/50 dark:bg-emerald-950/10 p-3 rounded">
-                                        <h5 class="font-bold text-emerald-700 dark:text-emerald-400 mb-1">Strengths / Positives</h5>
+                                        <h5 data-i18n="positive_title" class="font-bold text-emerald-700 dark:text-emerald-400 mb-1">Strengths / Positives</h5>
                                         <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300" id="revBPos"></ul>
                                     </div>
                                     <div class="bg-rose-50/50 dark:bg-rose-950/10 p-3 rounded">
-                                        <h5 class="font-bold text-rose-700 dark:text-rose-400 mb-1">Critical Deficiencies</h5>
+                                        <h5 data-i18n="deficiencies_title" class="font-bold text-rose-700 dark:text-rose-400 mb-1">Critical Deficiencies</h5>
                                         <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300" id="revBCrit"></ul>
                                     </div>
                                     <div class="bg-slate-50 dark:bg-academic-950 p-3 rounded">
-                                        <h5 class="font-bold text-slate-500 mb-1">Mandatory Revisions</h5>
+                                        <h5 data-i18n="revisions_title" class="font-bold text-slate-500 mb-1">Mandatory Revisions</h5>
                                         <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300" id="revBRev"></ul>
                                     </div>
                                 </div>
@@ -633,20 +632,20 @@
 
                             <!-- Reviewer C -->
                             <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
-                                <h4 class="text-xs font-bold text-indigo-600 uppercase tracking-wider border-b border-slate-100 dark:border-slate-800 pb-2 mb-3 flex items-center gap-1.5">
+                                <h4 data-i18n="reviewer_c_lbl" class="text-xs font-bold text-indigo-600 uppercase tracking-wider border-b border-slate-100 dark:border-slate-800 pb-2 mb-3 flex items-center gap-1.5">
                                     <i class="fa-solid fa-copy"></i> Reviewer C – Reproducibility Reviewer
                                 </h4>
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
                                     <div class="bg-emerald-50/50 dark:bg-emerald-950/10 p-3 rounded">
-                                        <h5 class="font-bold text-emerald-700 dark:text-emerald-400 mb-1">Strengths / Positives</h5>
+                                        <h5 data-i18n="positive_title" class="font-bold text-emerald-700 dark:text-emerald-400 mb-1">Strengths / Positives</h5>
                                         <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300" id="revCPos"></ul>
                                     </div>
                                     <div class="bg-rose-50/50 dark:bg-rose-950/10 p-3 rounded">
-                                        <h5 class="font-bold text-rose-700 dark:text-rose-400 mb-1">Critical Deficiencies</h5>
+                                        <h5 data-i18n="deficiencies_title" class="font-bold text-rose-700 dark:text-rose-400 mb-1">Critical Deficiencies</h5>
                                         <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300" id="revCCrit"></ul>
                                     </div>
                                     <div class="bg-slate-50 dark:bg-academic-950 p-3 rounded">
-                                        <h5 class="font-bold text-slate-500 mb-1">Mandatory Revisions</h5>
+                                        <h5 data-i18n="revisions_title" class="font-bold text-slate-500 mb-1">Mandatory Revisions</h5>
                                         <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300" id="revCRev"></ul>
                                     </div>
                                 </div>
@@ -657,15 +656,15 @@
                     <!-- TAB 5: EXPORT/REPORT -->
                     <div id="content-export" class="tab-content hidden space-y-6">
                         <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm text-center">
-                            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4">Export Capabilities</h3>
-                            <p class="text-xs text-slate-500 mb-6">Convert the complete peer positioning analysis to Academic Markdown format or generate a beautiful PDF report.</p>
+                            <h3 data-i18n="export_capabilities_title" class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4">Export Capabilities</h3>
+                            <p data-i18n="export_capabilities_desc" class="text-xs text-slate-500 mb-6">Convert the complete peer positioning analysis to Academic Markdown format or generate a beautiful PDF report.</p>
                             
                             <div class="flex flex-wrap justify-center gap-4">
                                 <button onclick="copyMarkdownReport()" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-900 dark:bg-academic-800 text-white font-bold text-xs uppercase tracking-wider rounded-lg flex items-center gap-1.5 transition">
-                                    <i class="fa-solid fa-copy"></i> Copy Markdown
+                                    <i class="fa-solid fa-copy"></i> <span data-i18n="copy_markdown_btn">Copy Markdown</span>
                                 </button>
                                 <button onclick="window.print()" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs uppercase tracking-wider rounded-lg flex items-center gap-1.5 transition">
-                                    <i class="fa-solid fa-file-pdf"></i> Print / Export PDF
+                                    <i class="fa-solid fa-file-pdf"></i> <span data-i18n="print_pdf_btn">Print / Export PDF</span>
                                 </button>
                             </div>
                         </div>
@@ -698,6 +697,154 @@
     <script>
         // API Key Definition matching runtime expectations
         const apiKey = ""; 
+
+        // TRANSLATIONS DICTIONARY (Fully Responsive Translation Engine)
+        const TRANSLATIONS = {
+            EN: {
+                app_sub: "Manuscript Positioning & Journal Matching",
+                rigor_mode: "Rigorous Review Mode",
+                author_title: "Independent Researcher, Vietnam",
+                workspace_title: "Manuscript Workspace",
+                load_demo: "Load Demo",
+                paper_title_lbl: "Manuscript Title",
+                paper_title_placeholder: "Enter target manuscript or concept title...",
+                paper_field_lbl: "Target Field & Aimed Journals",
+                paper_field_placeholder: "e.g., Federated Learning, IEEE TPAMI, Nature Biotech...",
+                paper_abstract_lbl: "Scientific Abstract",
+                paper_abstract_placeholder: "Write full abstract outlining introduction, methods, results...",
+                paper_details_lbl: "Key Details (Methodology, Math, Experiments, Data Links)",
+                paper_details_placeholder: "Include formulas, algorithms, datasets, code references...",
+                launch_engine_btn: "Launch Positioning Engine",
+                progress_lbl: "AI Positioning Progress",
+                progress_percent: "0% Complete",
+                decision_report: "Official Decision Report",
+                editorial_rigor: "Editorial Rigor",
+                tab_overview: "ADN & Genotype",
+                tab_soundness: "Technical Aspects",
+                tab_simulation: "Journal Matching",
+                tab_reports: "Peer Reviews",
+                tab_export: "Export Report",
+                phase0_title: "Phase 0: Manuscript Genotype & Ontology Analysis",
+                components_lbl: "Manuscript Components (%)",
+                operator_lbl: "Operator Classification",
+                species_lbl: "Manuscript Species",
+                dna_map_lbl: "DNA Index Map",
+                phase1_title: "Phase 1: Initial Desk Screening",
+                phase8_title: "Phase 8: Editorial Synthesized Opinion",
+                accept_reasons_lbl: "Three Strongest Arguments to Accept",
+                reject_reasons_lbl: "Three Strongest Arguments to Reject",
+                phase2_novelty_lbl: "Phase 2: Novelty Index",
+                phase3_rigor_lbl: "Phase 3: Rigor Index",
+                phase4_repro_lbl: "Phase 4: Reproducibility",
+                phase5_impact_lbl: "Phase 5: Impact Score",
+                phase3_detail_title: "Phase 3: Technical Soundness, Mathematics & Gaps",
+                major_concerns_lbl: "Major Concerns",
+                minor_concerns_lbl: "Minor Concerns",
+                missing_comp_lbl: "Missing Components",
+                phase2_detail_title: "Phase 2: Novelty Analysis & Breakthrough Potential",
+                novelty_strengths_lbl: "Novelty Strengths:",
+                novelty_gaps_lbl: "Novelty Gaps/Weaknesses:",
+                novelty_risk_lbl: "Novelty Risk Assessment:",
+                phase4_5_detail_title: "Phase 4 & 5: Replication & Community Impact",
+                code_avail_lbl: "Source Code & Data Accessibility:",
+                repro_soundness_lbl: "Theoretical Replication/Verification Soundness:",
+                impact_lbl: "Scientific Impact Vector:",
+                phase6_title: "Phase 6: Simulated Review Yield Distribution across Journal Tiers (Q1 - Q3)",
+                yield_probability_lbl: "Calculated probability models representing the likelihood of different outcomes across top-tier venues.",
+                phase9_title: "Phase 9: Strategic Submission Advisor",
+                phase7_title: "Phase 7: Individual Simulated Reviewer Board Transcripts",
+                reviewer_comments_lbl: "Rigorous feedback and revision guidelines produced by specialized autonomous scientific roles.",
+                reviewer_a_lbl: "Reviewer A – Technical Reviewer",
+                reviewer_b_lbl: "Reviewer B – Novelty Reviewer",
+                reviewer_c_lbl: "Reviewer C – Reproducibility Reviewer",
+                positive_title: "Strengths / Positives",
+                deficiencies_title: "Critical Deficiencies",
+                revisions_title: "Mandatory Revisions",
+                export_capabilities_title: "Export Capabilities",
+                export_capabilities_desc: "Convert the complete peer positioning analysis to Academic Markdown format or generate a beautiful PDF report.",
+                copy_markdown_btn: "Copy Markdown",
+                print_pdf_btn: "Print / Export PDF",
+                configure_platform_title: "Configure Platform",
+                api_key_lbl: "API Key (Leave empty to use System Key)",
+                api_key_placeholder: "Enter your Gemini API Key...",
+                api_key_desc: "If empty, the app will run on system allocated runtime keys automatically.",
+                ai_rigor_lbl: "AI Rigor Index (Temperature)",
+                ai_rigor_desc: "Low (0.1 - 0.3): Hyper-consistent, strict technical validation, objective assessments.",
+                save_config_btn: "Save Config"
+            },
+            VN: {
+                app_sub: "Định vị Bản thảo & Khớp nối Tạp chí",
+                rigor_mode: "Chế độ Phản biện Nghiêm ngặt",
+                author_title: "Nhà nghiên cứu độc lập, Việt Nam",
+                workspace_title: "Không gian Bản thảo",
+                load_demo: "Tải Bản thảo Mẫu",
+                paper_title_lbl: "Tiêu đề Bản thảo",
+                paper_title_placeholder: "Nhập tiêu đề bản thảo hoặc ý tưởng nghiên cứu...",
+                paper_field_lbl: "Lĩnh vực & Tạp chí Hướng tới",
+                paper_field_placeholder: "Ví dụ: Học máy, IEEE TPAMI, Nature Biotech...",
+                paper_abstract_lbl: "Tóm tắt Khoa học (Abstract)",
+                paper_abstract_placeholder: "Viết tóm tắt đầy đủ nêu rõ giới thiệu, phương pháp, kết quả...",
+                paper_details_lbl: "Chi tiết (Phương pháp, Toán học, Thực nghiệm, Link Code/Data)",
+                paper_details_placeholder: "Bao gồm công thức, thuật toán, tập dữ liệu, tham chiếu mã nguồn...",
+                launch_engine_btn: "Khởi chạy Bộ máy Định vị",
+                progress_lbl: "Tiến trình Định vị AI",
+                progress_percent: "0% Hoàn thành",
+                decision_report: "Báo cáo Quyết định Chính thức",
+                editorial_rigor: "Độ Nghiêm khắc Biên tập",
+                tab_overview: "ADN & Kiểu gen",
+                tab_soundness: "Khía cạnh Kỹ thuật",
+                tab_simulation: "Khớp nối Tạp chí",
+                tab_reports: "Phản biện Độc lập",
+                tab_export: "Xuất Báo cáo",
+                phase0_title: "Pha 0: Phân tích Kiểu gen & Bản thể học Bản thảo",
+                components_lbl: "Thành phần Bản thảo (%)",
+                operator_lbl: "Phân loại Toán tử",
+                species_lbl: "Phân loại Loài Bản thảo",
+                dna_map_lbl: "Bản đồ Chỉ số DNA",
+                phase1_title: "Pha 1: Sàng lọc Sơ bộ",
+                phase8_title: "Pha 8: Ý kiến Tổng hợp của Biên tập",
+                accept_reasons_lbl: "3 Luận điểm Mạnh nhất để Chấp nhận",
+                reject_reasons_lbl: "3 Luận điểm Mạnh nhất để Từ chối",
+                phase2_novelty_lbl: "Pha 2: Chỉ số Tính mới",
+                phase3_rigor_lbl: "Pha 3: Chỉ số Chặt chẽ",
+                phase4_repro_lbl: "Pha 4: Khả năng Tái lập",
+                phase5_impact_lbl: "Pha 5: Điểm Tác động",
+                phase3_detail_title: "Pha 3: Độ chuẩn xác Kỹ thuật, Toán học & Thiếu sót",
+                major_concerns_lbl: "Lo ngại Lớn",
+                minor_concerns_lbl: "Lo ngại Nhỏ",
+                missing_comp_lbl: "Thành phần Thiếu hụt",
+                phase2_detail_title: "Pha 2: Phân tích Tính mới & Tiềm năng Đột phá",
+                novelty_strengths_lbl: "Điểm mạnh về Tính mới:",
+                novelty_gaps_lbl: "Điểm yếu/Lỗ hổng về Tính mới:",
+                novelty_risk_lbl: "Đánh giá Rủi ro Tính mới:",
+                phase4_5_detail_title: "Pha 4 & 5: Tái lặp & Tác động Cộng đồng",
+                code_avail_lbl: "Mã nguồn & Khả năng Tiếp cận Dữ liệu:",
+                repro_soundness_lbl: "Độ tin cậy Tái lập Lý thuyết/Thực nghiệm:",
+                impact_lbl: "Véc-tơ Tác động Khoa học:",
+                phase6_title: "Pha 6: Giả lập Phân phối Kết quả qua các Cấp Tạp chí (Q1 - Q3)",
+                yield_probability_lbl: "Mô hình xác suất tính toán đại diện cho khả năng nhận các kết quả khác nhau tại các phân khúc tạp chí.",
+                phase9_title: "Pha 9: Tư vấn Chiến lược Nộp bài",
+                phase7_title: "Pha 7: Biên bản Nhận xét Giả lập từ Hội đồng Phản biện",
+                reviewer_comments_lbl: "Nhận xét khắt khe và hướng dẫn sửa đổi được đưa ra bởi các vai trò khoa học tự chủ chuyên sâu.",
+                reviewer_a_lbl: "Phản biện A – Kỹ thuật & Thực nghiệm",
+                reviewer_b_lbl: "Phản biện B – Tính mới & Đột phá",
+                reviewer_c_lbl: "Phản biện C – Tái lập & Tài nguyên",
+                positive_title: "Nhận xét Tích cực",
+                deficiencies_title: "Lỗ hổng Kỹ thuật Chính",
+                revisions_title: "Yêu cầu Sửa đổi Bắt buộc",
+                export_capabilities_title: "Khả năng Xuất dữ liệu",
+                export_capabilities_desc: "Chuyển đổi toàn bộ báo cáo phân tích định vị sang định dạng Academic Markdown hoặc in PDF chuẩn học thuật.",
+                copy_markdown_btn: "Sao chép Markdown",
+                print_pdf_btn: "In / Xuất PDF",
+                configure_platform_title: "Cấu hình Hệ thống",
+                api_key_lbl: "API Key (Để trống nếu dùng Key của Hệ thống)",
+                api_key_placeholder: "Nhập Gemini API Key của bạn...",
+                api_key_desc: "Nếu để trống, ứng dụng sẽ chạy trên các khóa khóa tạm thời được cấp phát tự động bởi hệ thống.",
+                ai_rigor_lbl: "Độ Nghiêm khắc AI (Nhiệt độ)",
+                ai_rigor_desc: "Thấp (0.1 - 0.3): Đánh giá cực kỳ nhất quán, kiểm chứng kỹ thuật nghiêm ngặt, khách quan.",
+                save_config_btn: "Lưu cấu hình"
+            }
+        };
 
         // Init Global State
         const state = {
@@ -733,6 +880,7 @@
         window.addEventListener('DOMContentLoaded', () => {
             initUI();
             checkAndApplyTheme();
+            applyLanguage(state.language); // Enforce default English loading sequence
         });
 
         function initUI() {
@@ -750,15 +898,15 @@
 
             langVNBtn.addEventListener('click', () => {
                 state.language = 'VN';
-                langVNBtn.className = "text-xs font-black px-1.5 py-0.5 rounded text-indigo-600 dark:text-indigo-400 bg-indigo-100/50 dark:bg-indigo-950/50 transition-all scale-105";
-                langENBtn.className = "text-xs font-bold px-1.5 py-0.5 rounded text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-all";
+                updateLanguageUI();
+                applyLanguage('VN');
                 showNotification("Đã chuyển ngôn ngữ phản biện sang TIẾNG VIỆT!", "info");
             });
 
             langENBtn.addEventListener('click', () => {
                 state.language = 'EN';
-                langENBtn.className = "text-xs font-black px-1.5 py-0.5 rounded text-indigo-600 dark:text-indigo-400 bg-indigo-100/50 dark:bg-indigo-950/50 transition-all scale-105";
-                langVNBtn.className = "text-xs font-bold px-1.5 py-0.5 rounded text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-all";
+                updateLanguageUI();
+                applyLanguage('EN');
                 showNotification("Changed evaluation output language to ENGLISH!", "info");
             });
 
@@ -780,7 +928,7 @@
                 localStorage.setItem('ujrs_temp', tempValue.toString());
                 
                 document.getElementById('settingsModal').classList.add('hidden');
-                showNotification('Platform configuration updated!', 'success');
+                showNotification(state.language === 'VN' ? 'Cấu hình nền tảng đã lưu!' : 'Platform configuration updated!', 'success');
             });
 
             document.getElementById('tempInput').addEventListener('input', (e) => {
@@ -800,6 +948,51 @@
 
             // Run Simulation triggers
             document.getElementById('runSimulator').addEventListener('click', startPeerReviewProcess);
+        }
+
+        function updateLanguageUI() {
+            const langVNBtn = document.getElementById('langVNBtn');
+            const langENBtn = document.getElementById('langENBtn');
+            if (state.language === 'VN') {
+                langVNBtn.className = "text-xs font-black px-1.5 py-0.5 rounded text-indigo-600 dark:text-indigo-400 bg-indigo-100/50 dark:bg-indigo-950/50 transition-all scale-105";
+                langENBtn.className = "text-xs font-bold px-1.5 py-0.5 rounded text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-all";
+            } else {
+                langENBtn.className = "text-xs font-black px-1.5 py-0.5 rounded text-indigo-600 dark:text-indigo-400 bg-indigo-100/50 dark:bg-indigo-950/50 transition-all scale-105";
+                langVNBtn.className = "text-xs font-bold px-1.5 py-0.5 rounded text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-all";
+            }
+        }
+
+        function applyLanguage(lang) {
+            // Apply normal text elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) {
+                    el.textContent = TRANSLATIONS[lang][key];
+                }
+            });
+            // Apply placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) {
+                    el.setAttribute('placeholder', TRANSLATIONS[lang][key]);
+                }
+            });
+
+            // Update terminal log instructions to match selection
+            const terminalLog = document.getElementById('terminalLog');
+            if (lang === 'VN') {
+                terminalLog.innerHTML = `
+                    <div class="text-slate-500">// TrajectoryLab đã sẵn sàng đánh giá hiệu năng bài viết khoa học.</div>
+                    <div class="text-slate-500">// Vui lòng nhập nội dung bản thảo hoặc bấm "Tải bài mẫu" bên trái.</div>
+                    <div class="text-slate-400">Chờ lệnh từ Ban biên tập... <span class="animate-pulse">_</span></div>
+                `;
+            } else {
+                terminalLog.innerHTML = `
+                    <div class="text-slate-500">// TrajectoryLab is ready to evaluate manuscript dynamics.</div>
+                    <div class="text-slate-500">// Paste manuscript details or load one of our academic demos to start.</div>
+                    <div class="text-slate-400">Awaiting editor command... <span class="animate-pulse">_</span></div>
+                `;
+            }
         }
 
         // Custom notification system
@@ -848,7 +1041,7 @@
                 document.getElementById('paperField').value = data.field;
                 document.getElementById('paperAbstract').value = data.abstract;
                 document.getElementById('paperContent').value = data.content;
-                showNotification(`Successfully loaded Demo ${num}!`, 'success');
+                showNotification(state.language === 'VN' ? `Tải thành công bài mẫu Demo ${num}!` : `Successfully loaded Demo ${num}!`, 'success');
             }
         }
 
@@ -856,6 +1049,9 @@
         function switchTab(tabId) {
             state.activeTab = tabId;
             document.querySelectorAll('.tab-btn').forEach(btn => {
+                // Keep classes pristine, updating active state
+                const span = btn.querySelector('span');
+                const i = btn.querySelector('i');
                 btn.className = 'tab-btn px-4 py-2 border-b-2 border-transparent font-bold text-xs uppercase tracking-wider text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 shrink-0 flex items-center gap-1.5';
             });
             document.querySelectorAll('.tab-content').forEach(content => {
@@ -880,7 +1076,7 @@
             const content = document.getElementById('paperContent').value.trim();
 
             if (!title || !abstract) {
-                showNotification('Please fill in at least the Title and Abstract to run positioning!', 'error');
+                showNotification(state.language === 'VN' ? 'Vui lòng điền tối thiểu Tiêu đề và Tóm tắt Abstract!' : 'Please fill in at least the Title and Abstract to run positioning!', 'error');
                 return;
             }
 
@@ -894,7 +1090,7 @@
             progressStepSection.classList.remove('hidden');
 
             terminalLog.innerHTML = `<div class="text-indigo-400"># INITIATING TRAJECTORYLAB PIPELINE EXECUTION...</div>`;
-            updateTerminal("Ingesting and processing structural manuscript metrics...", "info");
+            updateTerminal(state.language === 'VN' ? "Đang xử lý các cấu trúc dữ liệu và véc-tơ bản thảo..." : "Ingesting and processing structural manuscript metrics...", "info");
             updateProgress(10);
 
             // Constructing System and User Prompts
@@ -927,12 +1123,12 @@ Construct your analysis and produce a JSON payload matching the requested struct
             };
 
             try {
-                updateTerminal("Dispatching analytical payload to the AI Board...", "info");
+                updateTerminal(state.language === 'VN' ? "Đang truyền tải cấu trúc phân tích đến Hội đồng Khoa học AI..." : "Dispatching analytical payload to the AI Board...", "info");
                 updateProgress(25);
                 
                 const responseText = await callGeminiWithRetry(apiEndpoint, requestPayload);
                 updateProgress(85);
-                updateTerminal("Successfully received board results. Synthesizing data vectors...", "success");
+                updateTerminal(state.language === 'VN' ? "Đã nhận kết quả đánh giá. Đang khởi tạo bản đồ ADN học thuật..." : "Successfully received board results. Synthesizing data vectors...", "success");
 
                 const resultData = JSON.parse(responseText);
                 state.currentData = resultData;
@@ -940,7 +1136,7 @@ Construct your analysis and produce a JSON payload matching the requested struct
                 setTimeout(() => {
                     renderUIWithResults(resultData);
                     updateProgress(100);
-                    showNotification("Analysis completed successfully!", "success");
+                    showNotification(state.language === 'VN' ? "Quy trình phân định hoàn tất thành công!" : "Analysis completed successfully!", "success");
                     
                     terminalContainer.classList.add('hidden');
                     resultsContainer.classList.remove('hidden');
@@ -962,7 +1158,12 @@ Construct your analysis and produce a JSON payload matching the requested struct
         async function callGeminiWithRetry(endpoint, payload, retries = 5, delay = 1000) {
             for (let i = 0; i < retries; i++) {
                 try {
-                    updateTerminal(`[Query ${i+1}/${retries}] Validating theoretical frameworks and logic...`, "info");
+                    updateTerminal(
+                        state.language === 'VN' ? 
+                        `[Vòng kiểm tra ${i+1}/${retries}] Đang thẩm định lập luận logic và thiết kế thuật toán...` :
+                        `[Query ${i+1}/${retries}] Validating theoretical frameworks and logic...`, 
+                        "info"
+                    );
                     const res = await fetch(endpoint, {
                         method: 'POST',
                         headers: {
@@ -1006,7 +1207,8 @@ Construct your analysis and produce a JSON payload matching the requested struct
         }
 
         function updateProgress(percent) {
-            document.getElementById('progressPercent').textContent = `${percent}% Complete`;
+            const lang = state.language;
+            document.getElementById('progressPercent').textContent = lang === 'VN' ? `${percent}% Hoàn tất` : `${percent}% Complete`;
             document.getElementById('progressBar').style.width = `${percent}%`;
         }
 
@@ -1182,7 +1384,7 @@ Construct your analysis and produce a JSON payload matching the requested struct
         function generateMarkdownString() {
             if (!state.currentData) return "";
             const d = state.currentData;
-            return `# TRAJECTORYLAB posicionando REPORT
+            return `# TRAJECTORYLAB POSITIONING REPORT
 ## Paper Title: ${document.getElementById('paperTitle').value}
 **Final Verdict:** ${d.phase10.final_verdict}
 **Overall Rigor Index:** ${d.phase8.overall_score}/100
@@ -1231,7 +1433,7 @@ Generated by TrajectoryLab - Phan Thanh Trung (Independent Researcher, Vietnam).
             textarea.select();
             try {
                 document.execCommand('copy');
-                showNotification("Markdown copied to clipboard successfully!", "success");
+                showNotification(state.language === 'VN' ? "Đã sao chép báo cáo Markdown vào Clipboard!" : "Markdown copied to clipboard successfully!", "success");
             } catch (err) {
                 showNotification("Failed to copy clipboard data.", "error");
             }
