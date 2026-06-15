@@ -149,7 +149,7 @@
                 <a href="https://doi.org/10.5281/zenodo.20703794" target="_blank" class="flex items-center gap-1 text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition font-mono text-[11px] bg-white dark:bg-academic-800 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700">
                     <strong class="text-indigo-600 dark:text-indigo-400">DOI</strong> 10.5281/zenodo.20703794
                 </a>
-                <a href="https://github.com/Artifactsmaker/Manuscript-Trajectory-Framework" target="_blank" class="flex items-center gap-1 text-slate-600 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400 transition font-medium">
+                <a href="https://github.com/Artifactsmaker/Manuscript-Trajectory-Framework" target="_blank" class="flex items-center gap-1 text-slate-600 hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-400 transition font-medium">
                     <i class="fa-brands fa-github text-base"></i>
                     <span>Artifactsmaker/Manuscript-Trajectory-Framework</span>
                 </a>
@@ -316,7 +316,7 @@
                 <!-- TOP HEADER DECISION PANEL -->
                 <div class="bg-white dark:bg-academic-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                        <div>
+                        <div class="flex-grow">
                             <div class="flex items-center gap-2 mb-1.5">
                                 <span class="text-xs font-bold uppercase px-2.5 py-0.5 rounded-full tracking-wider" id="verdictBadge">
                                     --
@@ -336,6 +336,20 @@
                             <div class="h-12 w-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                                 <div id="scoreBar" class="bg-indigo-600 h-0 transition-all duration-1000"></div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Category Status / determined tier Indicator widgets -->
+                    <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800/60 w-full">
+                        <div class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-2 flex items-center gap-1">
+                            <i class="fa-solid fa-layer-group"></i> Determined Manuscript Tier &amp; Channel
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span id="tierBadge-Q1" class="px-2.5 py-1 rounded-lg border border-slate-100 dark:border-slate-800/50 bg-slate-50/50 dark:bg-academic-950/30 text-slate-400 dark:text-slate-600 font-semibold transition-all">Q1 Journal</span>
+                            <span id="tierBadge-Q2" class="px-2.5 py-1 rounded-lg border border-slate-100 dark:border-slate-800/50 bg-slate-50/50 dark:bg-academic-950/30 text-slate-400 dark:text-slate-600 font-semibold transition-all">Q2 Journal</span>
+                            <span id="tierBadge-Q3" class="px-2.5 py-1 rounded-lg border border-slate-100 dark:border-slate-800/50 bg-slate-50/50 dark:bg-academic-950/30 text-slate-400 dark:text-slate-600 font-semibold transition-all">Q3 Journal</span>
+                            <span id="tierBadge-Preprint" class="px-2.5 py-1 rounded-lg border border-slate-100 dark:border-slate-800/50 bg-slate-50/50 dark:bg-academic-950/30 text-slate-400 dark:text-slate-600 font-semibold transition-all">Preprint</span>
+                            <span id="tierBadge-Whitepaper" class="px-2.5 py-1 rounded-lg border border-slate-100 dark:border-slate-800/50 bg-slate-50/50 dark:bg-academic-950/30 text-slate-400 dark:text-slate-600 font-semibold transition-all">Whitepaper</span>
                         </div>
                     </div>
                 </div>
@@ -811,7 +825,7 @@
                 phase3_rigor_lbl: "Pha 3: Chỉ số Chặt chẽ",
                 phase4_repro_lbl: "Pha 4: Khả năng Tái lập",
                 phase5_impact_lbl: "Pha 5: Điểm Tác động",
-                phase3_detail_title: "Pha 3: Độ chuẩn xác Kỹ thuật, Toán học & Thiếu sót",
+                phase3_detail_title: "Pha 3: Độ chuẩn xác Kỹ thuật, Toán học & Thi sót",
                 major_concerns_lbl: "Lo ngại Lớn",
                 minor_concerns_lbl: "Lo ngại Nhỏ",
                 missing_comp_lbl: "Thành phần Thiếu hụt",
@@ -970,10 +984,10 @@
             const langENBtn = document.getElementById('langENBtn');
             if (state.language === 'VN') {
                 langVNBtn.className = "text-xs font-black px-1.5 py-0.5 rounded text-indigo-600 dark:text-indigo-400 bg-indigo-100/50 dark:bg-indigo-950/50 transition-all scale-105";
-                langENBtn.className = "text-xs font-bold px-1.5 py-0.5 rounded text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-all";
+                langENBtn.className = "text-xs font-bold px-1.5 py-0.5 rounded text-slate-400 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all";
             } else {
                 langENBtn.className = "text-xs font-black px-1.5 py-0.5 rounded text-indigo-600 dark:text-indigo-400 bg-indigo-100/50 dark:bg-indigo-950/50 transition-all scale-105";
-                langVNBtn.className = "text-xs font-bold px-1.5 py-0.5 rounded text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-all";
+                langVNBtn.className = "text-xs font-bold px-1.5 py-0.5 rounded text-slate-400 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all";
             }
         }
 
@@ -1207,8 +1221,6 @@ Key Material Details:
 
 Construct your analysis and produce a JSON payload matching the requested structured output scheme. Be completely direct, rigorous, and scientific.`;
 
-            const apiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${activeApiKey}`;
-
             const requestPayload = {
                 contents: [{ parts: [{ text: userQuery }] }],
                 systemInstruction: { parts: [{ text: systemPrompt }] },
@@ -1223,7 +1235,7 @@ Construct your analysis and produce a JSON payload matching the requested struct
                 updateTerminal(state.language === 'VN' ? "Đang truyền tải cấu trúc phân tích đến Hội đồng Khoa học AI..." : "Dispatching analytical payload to the AI Board...", "info");
                 updateProgress(25);
                 
-                const responseText = await callGeminiWithRetry(apiEndpoint, requestPayload);
+                const responseText = await callGeminiWithRetry(activeApiKey, requestPayload);
                 updateProgress(85);
                 updateTerminal(state.language === 'VN' ? "Đã nhận kết quả đánh giá. Đang khởi tạo bản đồ ADN học thuật..." : "Successfully received board results. Synthesizing data vectors...", "success");
 
@@ -1252,13 +1264,21 @@ Construct your analysis and produce a JSON payload matching the requested struct
             }
         }
 
-        async function callGeminiWithRetry(endpoint, payload, retries = 5, delay = 1000) {
+        async function callGeminiWithRetry(activeApiKey, payload, retries = 5, delay = 1000) {
+            // Robust list of models to try. Production model "gemini-2.5-flash" is standard.
+            // If the key has restricted access, fall back dynamically to avoid 404 NOT_FOUND.
+            const models = ["gemini-2.5-flash", "gemini-2.5-flash-preview-09-2025", "gemini-1.5-flash"];
+            let modelIndex = 0;
+
             for (let i = 0; i < retries; i++) {
+                const currentModel = models[modelIndex];
+                const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${currentModel}:generateContent?key=${activeApiKey}`;
+                
                 try {
                     updateTerminal(
                         state.language === 'VN' ? 
-                        `[Vòng kiểm tra ${i+1}/${retries}] Đang thẩm định lập luận logic và thiết kế thuật toán...` :
-                        `[Query ${i+1}/${retries}] Validating theoretical frameworks and logic...`, 
+                        `[Vòng kiểm tra ${i+1}/${retries}] Đang thẩm định lập luận logic bằng mô hình ${currentModel}...` :
+                        `[Query ${i+1}/${retries}] Validating theoretical frameworks using ${currentModel}...`, 
                         "info"
                     );
                     const res = await fetch(endpoint, {
@@ -1271,6 +1291,17 @@ Construct your analysis and produce a JSON payload matching the requested struct
 
                     if (!res.ok) {
                         const errText = await res.text();
+                        let errObj = {};
+                        try {
+                            errObj = JSON.parse(errText);
+                        } catch(e) {}
+
+                        // If the model was not found (404), advance to next candidate model immediately for retry
+                        if (res.status === 404 || (errObj.error && errObj.error.status === "NOT_FOUND")) {
+                            updateTerminal(`[WARNING]: Model ${currentModel} not available on this API key. Cycling model...`, "warn");
+                            modelIndex = (modelIndex + 1) % models.length;
+                        }
+
                         throw new Error(`HTTP Error: ${res.status} - ${errText}`);
                     }
 
@@ -1331,6 +1362,35 @@ Construct your analysis and produce a JSON payload matching the requested struct
             document.getElementById('overallScore').textContent = `${overall}/100`;
             document.getElementById('scoreBar').style.height = `${overall}%`;
 
+            // Reset dynamic tier indicator badges inside top banner
+            const tiers = ['Q1', 'Q2', 'Q3', 'Preprint', 'Whitepaper'];
+            tiers.forEach(t => {
+                const el = document.getElementById(`tierBadge-${t}`);
+                if (el) {
+                    el.className = "px-2.5 py-1 rounded-lg border border-slate-100 dark:border-slate-800/50 bg-slate-50/50 dark:bg-academic-950/30 text-slate-400 dark:text-slate-600 font-semibold transition-all";
+                }
+            });
+
+            // Map and activate the matched category
+            const speciesStr = (data.phase0.final_classification_species || "").toUpperCase();
+            let matchedTier = "";
+            if (speciesStr.includes("Q1")) matchedTier = "Q1";
+            else if (speciesStr.includes("Q2")) matchedTier = "Q2";
+            else if (speciesStr.includes("Q3")) matchedTier = "Q3";
+            else if (speciesStr.includes("PREPRINT")) matchedTier = "Preprint";
+            else if (speciesStr.includes("WHITEPAPER")) matchedTier = "Whitepaper";
+
+            if (matchedTier) {
+                const actBadge = document.getElementById(`tierBadge-${matchedTier}`);
+                if (actBadge) {
+                    if (matchedTier === 'Q1') actBadge.className = "px-2.5 py-1 rounded-lg border border-indigo-500/80 bg-indigo-50/50 text-indigo-700 dark:bg-indigo-950/30 dark:text-indigo-300 font-bold transition-all ring-2 ring-indigo-500/20";
+                    else if (matchedTier === 'Q2') actBadge.className = "px-2.5 py-1 rounded-lg border border-blue-500/80 bg-blue-50/50 text-blue-700 dark:bg-blue-950/30 dark:text-blue-300 font-bold transition-all ring-2 ring-blue-500/20";
+                    else if (matchedTier === 'Q3') actBadge.className = "px-2.5 py-1 rounded-lg border border-amber-500/80 bg-amber-50/50 text-amber-700 dark:bg-amber-950/30 dark:text-amber-300 font-bold transition-all ring-2 ring-amber-500/20";
+                    else if (matchedTier === 'Preprint') actBadge.className = "px-2.5 py-1 rounded-lg border border-violet-500/80 bg-violet-50/50 text-violet-700 dark:bg-violet-950/30 dark:text-violet-300 font-bold transition-all ring-2 ring-violet-500/20";
+                    else if (matchedTier === 'Whitepaper') actBadge.className = "px-2.5 py-1 rounded-lg border border-emerald-500/80 bg-emerald-50/50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300 font-bold transition-all ring-2 ring-emerald-500/20";
+                }
+            }
+
             const dnaPercentContainer = document.getElementById('dnaPercentages');
             dnaPercentContainer.innerHTML = '';
             data.phase0.primary_type_percentages.forEach(item => {
@@ -1382,10 +1442,14 @@ Construct your analysis and produce a JSON payload matching the requested struct
             // Editor Verdict
             document.getElementById('editorSummary').textContent = data.phase8.summary;
 
+            // Prevent double dot lists
             const renderList = (elId, list) => {
                 const el = document.getElementById(elId);
                 el.innerHTML = '';
-                list.forEach(item => { el.innerHTML += `<li>• ${item}</li>`; });
+                list.forEach(item => { 
+                    const cleanedItem = item.replace(/^[\s•\-\*\d\.\)]+/, '').trim();
+                    el.innerHTML += `<li>• ${cleanedItem}</li>`; 
+                });
             };
             renderList('reasonsAccept', data.phase8.reasons_accept);
             renderList('reasonsReject', data.phase8.reasons_reject);
