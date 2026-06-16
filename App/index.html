@@ -149,7 +149,7 @@
                 <a href="https://doi.org/10.5281/zenodo.20703794" target="_blank" class="flex items-center gap-1 text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition font-mono text-[11px] bg-white dark:bg-academic-800 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700">
                     <strong class="text-indigo-600 dark:text-indigo-400">DOI</strong> 10.5281/zenodo.20703794
                 </a>
-                <a href="https://github.com/Artifactsmaker/Manuscript-Trajectory-Framework" target="_blank" class="flex items-center gap-1 text-slate-600 hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-400 transition font-medium">
+                <a href="https://github.com/Artifactsmaker/Manuscript-Trajectory-Framework" target="_blank" class="flex items-center gap-1 text-slate-600 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400 transition font-medium">
                     <i class="fa-brands fa-github text-base"></i>
                     <span>Artifactsmaker/Manuscript-Trajectory-Framework</span>
                 </a>
@@ -825,7 +825,7 @@
                 phase3_rigor_lbl: "Pha 3: Chỉ số Chặt chẽ",
                 phase4_repro_lbl: "Pha 4: Khả năng Tái lập",
                 phase5_impact_lbl: "Pha 5: Điểm Tác động",
-                phase3_detail_title: "Pha 3: Độ chuẩn xác Kỹ thuật, Toán học & Thi sót",
+                phase3_detail_title: "Pha 3: Độ chuẩn xác Kỹ thuật, Toán học & Thiếu sót",
                 major_concerns_lbl: "Lo ngại Lớn",
                 minor_concerns_lbl: "Lo ngại Nhỏ",
                 missing_comp_lbl: "Thành phần Thiếu hụt",
@@ -894,7 +894,7 @@
                 title: "Provably Secure and Communication-Efficient Federated Learning under Non-IID Datasets with Dynamic Weight Aggregation",
                 field: "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)",
                 abstract: "Federated Learning (FL) provides a critical paradigm for privacy-preserving cooperative machine learning. However, data heterogeneity (non-IID) across nodes degrades convergence guarantees, and communications costs remain a bottleneck. In this manuscript, we present FedDynamic, a mathematical framework using dynamic Lyapunov-based aggregation to balance bandwidth and convergence. We mathematically prove a global upper bound on model divergence of $O(1/T)$ and introduce a lightweight homomorphic secure layer.",
-                content: "Methodology & Mathematical Formulation:\nLet $N$ be the set of nodes. We solve the global objective:\n$$\\min_{\\theta} F(\\theta) = \\sum_{i=1}^{|N|} p_i F_i(\\theta)$$\nWhere $F_i(\\theta)$ is the localized risk function on heterogeneous distribution $\\mathcal{D}_i$.\nWe formulate the dynamic weighting scheme:\n$$W_i^{(t)} = \\alpha_i \\exp\\left( -\\frac{\\gamma \\cdot ||\\nabla F_i(\\theta^{(t)})||}{\\sigma_i^2} \\right)$$\nThis guarantees that slow, noisy, or Byzantine nodes are penalized under strict bounds.\n\nExperimental Setup:\nBenchmarks run on MNIST, CIFAR-10, and synthetic non-IID sets across 100 simulated worker nodes. Full implementation code with cryptographic checks is open-sourced at: https://github.com/academic-reviewer-mock/feddynamic-tpami\nWe compare with academic standards like FedAvg, FedProx, and SCAFFOLD."
+                content: "Methodology & Mathematical Formulation:\nLet $N$ be the set of nodes. We solve the global objective:\n$$\min_{\\theta} F(\\theta) = \\sum_{i=1}^{|N|} p_i F_i(\\theta)$$\nWhere $F_i(\\theta)$ is the localized risk function on heterogeneous distribution $\\mathcal{D}_i$.\nWe formulate the dynamic weighting scheme:\n$$W_i^{(t)} = \\alpha_i \\exp\\left( -\\frac{\\gamma \\cdot ||\\nabla F_i(\\theta^{(t)})||}{\\sigma_i^2} \\right)$$\nThis guarantees that slow, noisy, or Byzantine nodes are penalized under strict bounds.\n\nExperimental Setup:\nBenchmarks run on MNIST, CIFAR-10, and synthetic non-IID sets across 100 simulated worker nodes. Full implementation code with cryptographic checks is open-sourced at: https://github.com/academic-reviewer-mock/feddynamic-tpami\nWe compare with academic standards like FedAvg, FedProx, and SCAFFOLD."
             },
             3: {
                 title: "On the Philosophical Feasibility of Silicon-Based Sentience: A Functionalist Cognitive Architecture and Roadmap",
@@ -984,10 +984,10 @@
             const langENBtn = document.getElementById('langENBtn');
             if (state.language === 'VN') {
                 langVNBtn.className = "text-xs font-black px-1.5 py-0.5 rounded text-indigo-600 dark:text-indigo-400 bg-indigo-100/50 dark:bg-indigo-950/50 transition-all scale-105";
-                langENBtn.className = "text-xs font-bold px-1.5 py-0.5 rounded text-slate-400 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all";
+                langENBtn.className = "text-xs font-bold px-1.5 py-0.5 rounded text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-all";
             } else {
                 langENBtn.className = "text-xs font-black px-1.5 py-0.5 rounded text-indigo-600 dark:text-indigo-400 bg-indigo-100/50 dark:bg-indigo-950/50 transition-all scale-105";
-                langVNBtn.className = "text-xs font-bold px-1.5 py-0.5 rounded text-slate-400 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all";
+                langVNBtn.className = "text-xs font-bold px-1.5 py-0.5 rounded text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-all";
             }
         }
 
@@ -1206,9 +1206,14 @@
             updateTerminal(state.language === 'VN' ? "Đang xử lý các cấu trúc dữ liệu và véc-tơ bản thảo..." : "Ingesting and processing structural manuscript metrics...", "info");
             updateProgress(10);
 
-            // Constructing System and User Prompts
+            // Constructing System and User Prompts with robust scoring consistency guidelines
             const systemPrompt = `You are TrajectoryLab's core AI Editorial Board designed to simulate high-tier journal peer evaluation processes (e.g., Nature, IEEE, ACM, Science).
 Your objective is to provide strict, balanced, completely objective scientific analysis on publication readiness, novelty, math consistency, replication potential, and journal matchmaking.
+
+CRITICAL SCORING CONSTRAINTS & ACCURACY:
+- Ensure numeric scores are mathematically, proportionally, and logically aligned with your qualitative text reviews.
+- NEVER output low single-digit scores (like 8/100) if the qualitative feedback is highly positive ("high suitability", "excellent logical flow"). In such cases, the score must be proportional (e.g., 80 to 90 out of 100).
+- Check your JSON output closely to ensure you don't drop zeros (e.g., writing 8 instead of 80) for score fields like 'score' in phase1, and phase8 'overall_score'. Keep 0-100 metrics fully consistent with 0-10 metrics.
 
 Generate feedback adhering STRICTLY to the requested JSON schema. Write all qualitative analysis, feedback comments, decisions, reasons, and descriptions in ${state.language === 'VN' ? 'Vietnamese' : 'English'}. Use proper academic terminology. Render formulas with LaTeX notation ($...$ or $$...$$) where applicable.`;
 
@@ -1442,7 +1447,7 @@ Construct your analysis and produce a JSON payload matching the requested struct
             // Editor Verdict
             document.getElementById('editorSummary').textContent = data.phase8.summary;
 
-            // Prevent double dot lists
+            // Prevent double dot lists and cleanse redundant markdown list markers
             const renderList = (elId, list) => {
                 const el = document.getElementById(elId);
                 el.innerHTML = '';
